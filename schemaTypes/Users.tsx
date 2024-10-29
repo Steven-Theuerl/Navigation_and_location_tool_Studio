@@ -10,7 +10,15 @@ export const Users = defineType({
             name: 'name',
             type: 'string',
             description: 'Identifier for this particular piece of content.'
-        })
+        }),
+        defineField({
+            name: 'location',
+            type: 'object',
+                fields: [
+                    {name: 'latitude', type: 'string'},
+                    {name: 'longitude', type: 'string'}
+                ]
+        }),
     ],
   
 })
